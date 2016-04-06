@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Offshore company name generator</title>
+    <meta charset=utf-8>
+    <meta name="description" content="For all your offshore company needs">
+</head>
+<p>Your company name: {{name}}</p>
+<p>Business entity: {{type}}</p>
+<p>Address: {{address}}</p>
+<input name="regen" type="submit" value="Generate another offshore company name"> 
+</body>
+</html>
