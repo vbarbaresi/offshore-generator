@@ -7,6 +7,8 @@
 <p>Your company name: {{name}}</p>
 <p>Business entity: {{type}}</p>
 <p>Address: {{address}}</p>
-<input name="regen" type="submit" value="Generate another offshore company name"> 
+<form>
+<button>Generate another offshore company name</button>
+</form>
 </body>
 </html>
