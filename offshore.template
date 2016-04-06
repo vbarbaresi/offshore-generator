@@ -14,17 +14,25 @@
 .divsection {
     display: table;
     width: 100%;
-    min-height: 10%;
-    height: 10%;
+    min-height: 8%;
+    height: 8%;
     z-index: 0;
     }
 .divcontent {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 120%;
     line-height: 110%;
-    padding: 15%;
+    padding: 10%;
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
+    }
+.divfooter {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 120%;
+    line-height: 110%;
+    padding: 2%;
+    display: table-cell;
     text-align: center;
     }
 .divtitle {
@@ -136,12 +144,13 @@ h1 {
 </div>
 </div>
 <div class="divsection" style="background-color: #ECEAEA">
-    <div class="divcontent">
+    <div class="divfooter">
         Generated using <a href="https://offshoreleaks.icij.org/">ICIJ offshore leaks database</a>
         <p>Database info:</p>
         <li>Company words in database: {{total_names}}</li>
         <li>Company addresses in database: {{total_addresses}}</li>
         <li>Company entities: {{total_types}}</li>
+        <a href="https://github.com/vbarbaresi/offshore-generator">Source code on GitHub</a>
     </div>
 </div>
 </div>
