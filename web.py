@@ -1,5 +1,6 @@
 import json
 import random
+import os
 import bottle
 import markov
 
@@ -17,6 +18,8 @@ total_addresses = len(addresses)
 total_types = len(types)
 
 markov = markov.Markov(names)
+
+imgs = os.listdir("img")
 
 fishy_suffixes = [
 "Limited",
@@ -54,7 +57,13 @@ def main_page():
     markov_name = markov.generate_markov_text(size=n_elements)
     company_name = "{} {}".format(markov_name, random.choice(fishy_suffixes))
     values = {"name": company_name , "address": random.choice(addresses), "type": random.choice(types),
-              "total_names": total_names, "total_addresses": total_addresses, "total_types": total_types}
+              "total_names": total_names, "total_addresses": total_addresses, "total_types": total_types,
+              "img": random.choice(imgs)}
     return values
 
-bottle.run(app, server="flup", host='localhost', port=8080)
+
+@app.route("/img/<filename>")
+def server_static(filename):
+    return bottle.static_file(filename, root="img")
+
+bottle.run(app, host='localhost', port=8080)

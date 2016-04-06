@@ -1,24 +1,101 @@
 <html>
 <head>
-    <title>The Offshore Company name generator</title>
+    <title>The Offshore Company generator</title>
     <meta charset=utf-8>
     <meta name="description" content="For all your offshore company needs">
+<style ype="text/css">
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+.divsection {
+    display: table;
+    width: 100%;
+    min-height: 10%;
+    height: 10%;
+    z-index: 0;
+    }
+.divcontent {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 120%;
+    line-height: 110%;
+    padding: 15%;
+    display: table-cell;
+    vertical-align: middle;
+    }
+.divtitle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.divbackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 1;
+    filter: brightness(75%)
+    }
+p.name{
+    font-size: 145%;
+    }
+p.address{
+    font-style: italic;
+    }
+ul {
+  list-style: none;
+}
+h1 {
+font-family: times, Times New Roman, times-roman, georgia, serif;
+		font-size: 48px;
+	        line-height: 40px;
+	        letter-spacing: -1px;
+		color: #444;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+                font-weight: 100;
+}
+</style>
 </head>
-<center>
-<h1>The Offshore Company Name Generator</h1>
-<ul>
-<li>Company name: <b>{{name}}</b></li>
-<li>Business entity: {{type}}</li>
-<li>Address: {{address}}</li>
-</ul>
-<form>
-<button>Generate another offshore company name</button>
-</form>
-Generated using <a href="https://offshoreleaks.icij.org/">ICIJ offshore leaks database</a>
-<p>Database info:</p>
-<li>Company words in database: {{total_names}}</li>
-<li>Company addresses in database: {{total_addresses}}</li>
-<li>Company entities: {{total_types}}</li>
-</center>
+<body>
+<div class="main">
+<div class="divsection" style="background-color: #ECEAEA">
+    <div class="divtitle">
+        <h1>Offshore Company Generator</h1>
+    </div>
+</div>
+<div class="divsection">
+    <div class="divbackground" style="background-image: url(img/{{img}});">
+</div>
+<div class="divcontent">
+    <div style="background-color: #ECEAEA; opacity: 0.9; padding: 2%; border:3px outset #C4C3C3;">
+        <ul>
+        <li><p class="name">{{name}}</p></li>
+        <li>{{type}}</li>
+        <li><p class="address">{{address}}</p></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="divsection" style="background-color: #ECEAEA">
+    <div class="divcontent">
+        Generated using <a href="https://offshoreleaks.icij.org/">ICIJ offshore leaks database</a>
+        <p>Database info:</p>
+        <li>Company words in database: {{total_names}}</li>
+        <li>Company addresses in database: {{total_addresses}}</li>
+        <li>Company entities: {{total_types}}</li>
+    </div>
+</div>
+</div>
 </body>
 </html>
