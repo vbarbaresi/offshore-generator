@@ -1,14 +1,24 @@
 <html>
 <head>
-    <title>Offshore company name generator</title>
+    <title>The Offshore Company name generator</title>
     <meta charset=utf-8>
     <meta name="description" content="For all your offshore company needs">
 </head>
-<p>Your company name: {{name}}</p>
-<p>Business entity: {{type}}</p>
-<p>Address: {{address}}</p>
+<center>
+<h1>The Offshore Company Name Generator</h1>
+<ul>
+<li>Company name: <b>{{name}}</b></li>
+<li>Business entity: {{type}}</li>
+<li>Address: {{address}}</li>
+</ul>
 <form>
 <button>Generate another offshore company name</button>
 </form>
+Generated using <a href="https://offshoreleaks.icij.org/">ICIJ offshore leaks database</a>
+<p>Database info:</p>
+<li>Company words in database: {{total_names}}</li>
+<li>Company addresses in database: {{total_addresses}}</li>
+<li>Company entities: {{total_types}}</li>
+</center>
 </body>
 </html>

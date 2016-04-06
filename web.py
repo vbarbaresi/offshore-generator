@@ -12,6 +12,10 @@ with open("addresses.json", "r") as f:
 with open("types.json", "r") as f:
     types = json.loads(f.read())
 
+total_names = len(names)
+total_addresses = len(addresses)
+total_types = len(types)
+
 markov = markov.Markov(names)
 
 fishy_suffixes = [
@@ -49,7 +53,8 @@ def main_page():
     n_elements = random.randint(1, 3)
     markov_name = markov.generate_markov_text(size=n_elements)
     company_name = "{} {}".format(markov_name, random.choice(fishy_suffixes))
-    values = {"name": company_name , "address": random.choice(addresses), "type": random.choice(types)}
+    values = {"name": company_name , "address": random.choice(addresses), "type": random.choice(types),
+              "total_names": total_names, "total_addresses": total_addresses, "total_types": total_types}
     return values
 
 bottle.run(app, server="flup", host='localhost', port=8080)
