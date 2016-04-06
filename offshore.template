@@ -25,11 +25,16 @@
     padding: 15%;
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
     }
 .divtitle {
     display: table-cell;
     vertical-align: middle;
 }
+.divtitle a {
+    color: black;
+    text-decoration: none;
+    }
 .divbackground{
     height: 100%;
     width: 100%;
@@ -57,15 +62,55 @@ ul {
   list-style: none;
 }
 h1 {
-font-family: times, Times New Roman, times-roman, georgia, serif;
-		font-size: 48px;
-	        line-height: 40px;
-	        letter-spacing: -1px;
-		color: #444;
-		margin: 0 0 0 0;
-		padding: 0 0 0 0;
-                font-weight: 100;
-text-align: center;
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #444;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-weight: 100;
+    text-align: center;
+}
+.button {
+	-moz-box-shadow:inset 1px 1px 0px 1px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 1px #ffffff;
+	box-shadow:inset 1px 1px 0px 1px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Verdana;
+	font-size:19px;
+	font-weight:bold;
+	padding:11px 39px;
+	text-decoration:none;
+
+}
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.button:active {
+	position:relative;
+	top:1px;
 }
 </style>
 </head>
@@ -73,7 +118,7 @@ text-align: center;
 <div class="main">
 <div class="divsection" style="background-color: #ECEAEA">
     <div class="divtitle">
-        <h1>Offshore Company Generator</h1>
+        <h1><a href="/">Offshore Company Generator</a></h1>
     </div>
 </div>
 <div class="divsection">
@@ -87,6 +132,7 @@ text-align: center;
         <li><p class="address">{{address}}</p></li>
         </ul>
     </div>
+<a href="/" class="button">Regenerate</a>
 </div>
 </div>
 <div class="divsection" style="background-color: #ECEAEA">
