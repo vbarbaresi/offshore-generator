@@ -66,4 +66,4 @@ def main_page():
 def server_static(filename):
     return bottle.static_file(filename, root="img")
 
-bottle.run(app, host='localhost', port=8080)
+bottle.run(app, server="flup", host='localhost', port=8080)
