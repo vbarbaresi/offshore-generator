@@ -38,6 +38,7 @@
 .divtitle {
     display: table-cell;
     vertical-align: middle;
+    padding: 1em;
 }
 .divtitle a {
     color: black;
