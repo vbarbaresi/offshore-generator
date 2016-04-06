@@ -43,7 +43,7 @@ fishy_suffixes = [
 "Pension Plan"]
 
 
-@app.route('/')
+@app.route("/")
 @bottle.view("offshore.template")
 def main_page():
     n_elements = random.randint(1, 3)
@@ -52,4 +52,4 @@ def main_page():
     values = {"name": company_name , "address": random.choice(addresses), "type": random.choice(types)}
     return values
 
-bottle.run(app, host='localhost', port=80)
+bottle.run(app, server="flup", host='localhost', port=8080)
