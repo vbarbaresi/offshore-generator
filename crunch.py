@@ -1,38 +1,38 @@
 import csv
 import json
-import codecs
 import re
+
 
 nodes = open("nodesNW.csv", "r")
 reader = csv.reader(nodes, delimiter=";", quotechar='"')
 
 fishy_suffixes = [
-"Limited",
-"Ltd",
-"Ltd.",
-"Co.",
-"Assets",
-"Corporation",
-"Holdings",
-"Holding",
-"Corp.",
-"Corp",
-"Inc.",
-"Inc",
-"Fund",
-"Fund Management",
-"Strategy Fund",
-"International",
-"Technology",
-"Company",
-"Services",
-"Trading",
-"Consulting",
-"Investments",
-"Investment",
-"Group",
-"S.A.",
-"Pension Plan"]
+    "Limited",
+    "Ltd",
+    "Ltd.",
+    "Co.",
+    "Assets",
+    "Corporation",
+    "Holdings",
+    "Holding",
+    "Corp.",
+    "Corp",
+    "Inc.",
+    "Inc",
+    "Fund",
+    "Fund Management",
+    "Strategy Fund",
+    "International",
+    "Technology",
+    "Company",
+    "Services",
+    "Trading",
+    "Consulting",
+    "Investments",
+    "Investment",
+    "Group",
+    "S.A.",
+    "Pension Plan"]
 
 types = set()
 names = set()
@@ -56,20 +56,16 @@ for row in reader:
 
 # Remove an eventual empty element, instead of checking during the loop
 for data in (types, names, addresses):
-    try:
-        data.remove("")
-    except KeyError:
-        pass
+    data.discard("")
 
-print "Extracted: "
-print "{} types".format(len(types))
-print "{} names".format(len(names))
-print "{} addresses".format(len(addresses))
+print("Extracted: ")
+print("{} types".format(len(types)))
+print("{} names".format(len(names)))
+print("{} addresses".format(len(addresses)))
 
-with codecs.open("names.json", "w", encoding="utf8") as f:
-    f.write(json.dumps(list(names)))
-with codecs.open("types.json", "w", encoding="utf8") as f:
-    f.write(json.dumps(list(types)))
-with codecs.open("addresses.json", "w", encoding="utf8") as f:
-    f.write(json.dumps(list(addresses)))
-    
+with open("names.json", "w") as f:
+    json.dump(list(names), f)
+with open("types.json", "w") as f:
+    json.dump(list(types), f)
+with open("addresses.json", "w") as f:
+    json.dump(list(addresses), f)
