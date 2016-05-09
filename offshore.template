@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Offshore Company Generator</title>
+    <title>#PanamaPapers Offshore Company Generator</title>
     <meta charset=utf-8>
     <meta name="description" content="For all your offshore company needs">
 <style ype="text/css">
@@ -127,14 +127,14 @@ h1 {
 <div class="main">
 <div class="divsection" style="background-color: #ECEAEA">
     <div class="divtitle">
-        <h1><a href="/">Offshore Company Generator</a></h1>
+        <h1><a href="/">#PanamaPapers Offshore Company Generator</a></h1>
     </div>
 </div>
 <div class="divsection">
     <div class="divbackground" style="background-image: url(img/{{img}});">
 </div>
 <div class="divcontent">
-    <div style="background-color: #ECEAEA; opacity: 0.9; padding: 2%; border:3px outset #C4C3C3;">
+    <div style="background-color: #ECEAEA; opacity: 0.75; padding: 2%; border:3px outset #C4C3C3;">
         <ul>
         <li><p class="name">{{name}}</p></li>
         <li>{{type}}</li>
@@ -146,7 +146,7 @@ h1 {
 </div>
 <div class="divsection" style="background-color: #ECEAEA">
     <div class="divfooter">
-        Generated using <a href="https://offshoreleaks.icij.org/">ICIJ offshore leaks database</a>
+        Generated using <a href="https://offshoreleaks.icij.org/">ICIJ #PanamaPapers offshore leaks database</a>
         <p>Database info:</p>
         <li>Company words in database: {{total_names}}</li>
         <li>Company addresses in database: {{total_addresses}}</li>
